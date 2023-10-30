@@ -2,8 +2,16 @@ server:
   port: 8070
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/dragon?serverTimezone=Asia/Seoul
-    username: angel
-    password: 1234
+  profiles:
+    include: apikey
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+#mybatis
+mybatis:
+  type-aliases-package: com.space.meong.*
+  mapper-locations:
+    - /mapper/**/*.xml #mapper 폴더 안에 어느 폴더에 있든 xml로 끝나는 파일
