@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%-- 로그인 했을 때 보이는 헤더 --%>
+<%-- 로그인 안했을 때 보이는 헤더 --%>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -26,6 +26,14 @@
         justify-content: center;
         position: relative;
         min-width: 878px;
+    }
+    .nav-sign {
+        color: #4c5db7; !important;
+        text-align: center;
+        font-weight: bold;
+    }
+    .nav-sign:hover {
+        color:#8496F0; !important;
     }
     fieldset {
         border: none; /* 기본 border 없애기(이 코드를 지우고 기본 border를 확인해보세요) */
@@ -124,18 +132,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">문의하기</a>
                 </li>
+                <div style="display: flex;" class="justify-content-center">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <li class="nav-item">
+                    <a class="nav-link nav-sign" href="#">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-sign" href="#">회원가입</a>
+                </li>
+                </div>
             </ul>
-        </div>
-        <div class="userAvata">
-            <a class="navbar-brand" href="#">
-                <img src="../images/spaceMeong_logo_min.png" alt="채팅" style="width:40px;" class="rounded-pill">
-            </a>
-            <a class="navbar-brand" href="#">
-                <img src="../images/spaceMeong_logo_min.png" alt="예약내역" style="width:40px;" class="rounded-pill">
-            </a>
-            <a class="navbar-brand" href="#">
-                <img src="../images/spaceMeong_logo_min.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
-            </a>
         </div>
     </nav>
     </div>
